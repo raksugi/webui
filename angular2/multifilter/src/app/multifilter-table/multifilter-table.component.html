@@ -1,0 +1,25 @@
+<table>
+  <thead>
+    <th>Article</th>
+    <th>Category</th>
+    <th>Classification</th>
+    <th>Cost</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td><input type="text" [(ngModel)]="filterAttributes.Article" 
+        (keyup)="filter()"></td>
+      <td><input type="text" [(ngModel)]="filterAttributes.Category" 
+        (keyup)="filter()"></td>
+      <td><input type="text" [(ngModel)]="filterAttributes.Classification" 
+        (keyup)="filter()"></td>
+    </tr>
+    <tr *ngFor="let article of displayData">
+      <td>{{article.Article}}</td>
+      <td>{{article.Category}}</td>
+      <td>{{article.Classification}}</td>
+      <td>{{article.Cost}}</td>
+    </tr>
+  </tbody>
+
+</table>
